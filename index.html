@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-
-  <link rel="stylesheet" href="styles.css">
-  
+  <title>Milk Tea Owner Login</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
-    <form>
+    <h2>Milk Tea Owner Login</h2>
+    <form onsubmit="login(event)">
       <label for="username">Username</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
-      <button> <a href="Pos.html">login</a></button>
-    
+
+      <input type="submit" value="Login">
     </form>
   </div>
 </body>

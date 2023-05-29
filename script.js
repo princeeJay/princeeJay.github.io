@@ -1,3 +1,22 @@
+   //login
+   function login(event) {
+    event.preventDefault(); // Prevent form submission
+  
+    // Perform validation and authentication
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+  
+    // Check if credentials are valid (replace with your authentication logic)
+    if (username === "admin" && password === "password") {
+      // Redirect to new transaction page
+      window.location.href = "Pos.html";
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  }
+  
+   
+   
    // Dictionary to store flavor prices
    var flavorPrices = {
     "Classic Milk Tea": 3.50,
@@ -55,10 +74,29 @@
     document.getElementById("sales-amount").innerText = "$" + totalSales.toFixed(2);
   }
 
-  function showProfile() {
-    // Replace with your profile logic
-    alert("Profile");
-  }
+
+    document.addEventListener("DOMContentLoaded", showProfile);
+
+    function showProfile() {
+      // Example data, replace with your own logic to retrieve user profile data
+      var userProfile = {
+        name: "Jacob Opinion",
+        email: "prince@example.com",
+        phone: "123-456-7890",
+        address: "123 Street, City, State, ZIP"
+      };
+
+      var profileContent = "<h2>Profile Information</h2>";
+      profileContent += "<p><strong>Name:</strong> " + userProfile.name + "</p>";
+      profileContent += "<p><strong>Email:</strong> " + userProfile.email + "</p>";
+      profileContent += "<p><strong>Phone:</strong> " + userProfile.phone + "</p>";
+      profileContent += "<p><strong>Address:</strong> " + userProfile.address + "</p>";
+
+      var profileContainer = document.getElementById("profile-container");
+      profileContainer.innerHTML = profileContent;
+    }
+ 
+  
 
   function showSales() {
     // Replace with your sales logic

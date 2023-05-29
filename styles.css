@@ -1,6 +1,6 @@
 /* Header  */
 body {
-    background-color: #f2f2f2;
+    background-color: #f2aa9b;
     font-family: Arial, sans-serif;
   }
   
@@ -81,7 +81,7 @@ body {
   .new-transaction-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #008CBA;
+    background-color: #f2aa9b;
     color: white;
     font-size: 16px;
     border: none;
@@ -90,5 +90,5 @@ body {
 
   .print-button:hover,
   .new-transaction-button:hover {
-    background-color: #006F9F;
+    background-color: #f2aa9b;
   }
