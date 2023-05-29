@@ -1,109 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Milk Tea POS System</title>
-  <style>
-    /* Add some basic styling */
-    body {
-      font-family: Arial, sans-serif;
-    }
+  <title>Login</title>
 
-    .flavor-button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      background-color: #4caf50;
-      color: white;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .flavor-button:hover {
-      background-color: #45a049;
-    }
-
-    #total {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .print-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #008CBA;
-      color: white;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .print-button:hover {
-      background-color: #006F9F;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
-  <h1>Milk Tea POS System</h1>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
 
-  <h2>Flavors</h2>
-  <button class="flavor-button" onclick="addFlavor('Classic Milk Tea')">Classic Milk Tea - $3.50</button>
-  <button class="flavor-button" onclick="addFlavor('Taro Milk Tea')">Taro Milk Tea - $4.00</button>
-  <button class="flavor-button" onclick="addFlavor('Matcha Milk Tea')">Matcha Milk Tea - $4.50</button>
-  <button class="flavor-button" onclick="addFlavor('Honeydew Milk Tea')">Honeydew Milk Tea - $4.00</button>
-  <button class="flavor-button" onclick="addFlavor('Thai Milk Tea')">Thai Milk Tea - $4.50</button>
-
-  <h2 id="total">Total: $0.00</h2>
-
-  <button class="print-button" onclick="printOrder()">Print</button>
-
-  <script>
-    // Dictionary to store flavor prices
-    var flavorPrices = {
-      "Classic Milk Tea": 3.50,
-      "Taro Milk Tea": 4.00,
-      "Matcha Milk Tea": 4.50,
-      "Honeydew Milk Tea": 4.00,
-      "Thai Milk Tea": 4.50
-    };
-
-    var flavors = {}; // Object to store selected flavors and their quantities
-
-    function addFlavor(flavor) {
-      if (flavors[flavor]) {
-        flavors[flavor]++;
-      } else {
-        flavors[flavor] = 1;
-      }
-      calculateTotal();
-    }
-
-    function calculateTotal() {
-      var total = 0;
-      for (var flavor in flavors) {
-        if (flavors.hasOwnProperty(flavor)) {
-          total += flavorPrices[flavor] * flavors[flavor];
-        }
-      }
-      document.getElementById("total").innerText = "Total: $" + total.toFixed(2);
-    }
-
-    function printOrder() {
-      var printWindow = window.open("", "_blank");
-      var orderContent = "<h1>Order Summary</h1>";
-      orderContent += "<ul>";
-      for (var flavor in flavors) {
-        if (flavors.hasOwnProperty(flavor)) {
-          orderContent += "<li>" + flavor + " - Quantity: " + flavors[flavor] + "</li>";
-        }
-      }
-      orderContent += "</ul>";
-      orderContent += "<h2 id='total'>Total: $" + document.getElementById("total").innerText.split("$")[1] + "</h2>";
-      printWindow.document.write(orderContent);
-      printWindow.document.close();
-      printWindow.print();
-    }
-  </script>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button> <a href="Pos.html">login</a></button>
+    
+    </form>
+  </div>
 </body>
 </html>

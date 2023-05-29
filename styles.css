@@ -1,0 +1,94 @@
+/* Header  */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #f2aa9b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #f2aa9b;
+  }
+  
+
+/* main POS  */
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  .flavor-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .flavor-button:hover {
+    background-color: #45a049;
+  }
+
+  #total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .print-button,
+  .new-transaction-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .print-button:hover,
+  .new-transaction-button:hover {
+    background-color: #006F9F;
+  }

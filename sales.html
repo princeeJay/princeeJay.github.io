@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Milk Tea POS System - Sales</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .order-list {
+      margin-top: 20px;
+    }
+
+    .order {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    
+    .navbar {
+      background-color: #a35f5f;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="profile.html">Profile</a>
+        <a href="sales.html" onclick="showSales()">Sales</a>
+        <a href="#" onclick="showInventory()">Inventory</a>
+        <a href="#" onclick="showSettings()">Settings</a>
+      </div>
+  <h1>Sales</h1>
+
+  <div class="order-list">
+    <h2>Recent Orders</h2>
+    <div id="orders-container"></div>
+  </div>
+
+  <script>
+    function displayOrders() {
+      var ordersContainer = document.getElementById("orders-container");
+      ordersContainer.innerHTML = "";
+
+      // Example data, replace with your own logic to retrieve the recent orders
+      var orders = [
+        {
+          id: 1,
+          flavors: {
+            "Classic Milk Tea": 2,
+            "Taro Milk Tea": 1
+          },
+          total: 11.00
+        },
+        {
+          id: 2,
+          flavors: {
+            "Matcha Milk Tea": 1,
+            "Thai Milk Tea": 3
+          },
+          total: 17.50
+        },
+        {
+          id: 3,
+          flavors: {
+            "Honeydew Milk Tea": 2,
+            "Taro Milk Tea": 1,
+            "Classic Milk Tea": 1
+          },
+          total: 18.50
+        },
+        {
+          id: 4,
+          flavors: {
+            "Honeydew Milk Tea": 2,
+            "Taro Milk Tea": 1,
+            "Classic Milk Tea": 1
+          },
+          total: 18.50
+        }
+        
+      ];
+
+      orders.forEach(function(order) {
+        var orderElement = document.createElement("div");
+        orderElement.classList.add("order");
+
+        var orderContent = "<h3>Order #" + order.id + "</h3>";
+        orderContent += "<ul>";
+
+        for (var flavor in order.flavors) {
+          if (order.flavors.hasOwnProperty(flavor)) {
+            orderContent += "<li>" + flavor + " - Quantity: " + order.flavors[flavor] + "</li>";
+          }
+        }
+
+        orderContent += "</ul>";
+        orderContent += "<p>Total: $" + order.total.toFixed(2) + "</p>";
+
+        orderElement.innerHTML = orderContent;
+        ordersContainer.appendChild(orderElement);
+      });
+    }
+
+    // Call the displayOrders function to populate the recent orders on page load
+    displayOrders();
+  </script>
+</body>
+</html>

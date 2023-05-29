@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Milk Tea POS System</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .flavor-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .flavor-button:hover {
+      background-color: #45a049;
+    }
+
+    #total {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .print-button,
+    .new-transaction-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #008CBA;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .print-button:hover,
+    .new-transaction-button:hover {
+      background-color: #006F9F;
+    }
+
+    .menu {
+      margin-top: 40px;
+    }
+
+    .menu h2 {
+      margin-bottom: 10px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      margin-bottom: 5px;
+    }
+
+    .total-sales {
+      margin-top: 40px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar {
+      background-color: #a35f5f;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="profile.html">Profile</a>
+    <a href="sales.html">Sales</a>
+    <a href="#" onclick="showInventory()">Inventory</a>
+    <a href="#" onclick="showSettings()">Settings</a>
+  </div>
+
+  <h1>Milk Tea POS System</h1>
+
+  <h2>Flavors</h2>
+  <button class="flavor-button" onclick="addFlavor('Classic Milk Tea')">Classic Milk Tea - $3.50</button>
+  <button class="flavor-button" onclick="addFlavor('Taro Milk Tea')">Taro Milk Tea - $4.00</button>
+  <button class="flavor-button" onclick="addFlavor('Matcha Milk Tea')">Matcha Milk Tea - $4.50</button>
+  <button class="flavor-button" onclick="addFlavor('Honeydew Milk Tea')">Honeydew Milk Tea - $4.00</button>
+  <button class="flavor-button" onclick="addFlavor('Thai Milk Tea')">Thai Milk Tea - $4.50</button>
+
+  
+  <h2>
+  <button class="print-button" onclick="printOrder()">Print</button>
+  <button class="new-transaction-button" onclick="newTransaction()">New Transaction</button>
+</h2>
+
+  <h2 id="total">Total: $0.00</h2>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
