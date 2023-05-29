@@ -7,7 +7,7 @@
     var password = document.getElementById("password").value;
   
     // Check if credentials are valid (replace with your authentication logic)
-    if (username === "admin" && password === "password") {
+    if (username === "admin" && password === "lorenzbaliw") {
       // Redirect to new transaction page
       window.location.href = "Pos.html";
     } else {
