@@ -11,9 +11,36 @@
     .profile-container {
       margin-top: 20px;
     }
+
+       
+    .navbar {
+      background-color: #a35f5f;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
   </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="profile.html">Profile</a>
+        <a href="sales.html" onclick="showSales()">Sales</a>
+        <a href="#" onclick="showInventory()">Inventory</a>
+        <a href="#" onclick="showSettings()">Settings</a>
+        <a href="Pos.html">Back</a>
+      </div>
   <h1>Profile</h1>
 
   <div class="profile-container" id="profile-container"></div>

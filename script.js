@@ -100,15 +100,15 @@
 
   function showSales() {
     // Replace with your sales logic
-    alert("Sales");
+
   }
 
   function showInventory() {
     // Replace with your inventory logic
-    alert("Inventory");
+   
   }
 
   function showSettings() {
     // Replace with your settings logic
-    alert("Settings");
+  
   }
